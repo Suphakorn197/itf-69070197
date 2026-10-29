@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Food Picker | สุ่มเมนูอาหารวันนี้</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="bg-blob one" aria-hidden="true"></div>
+  <div class="bg-blob two" aria-hidden="true"></div>
+
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="#home" class="nav-logo">
+        <span class="logo-mark" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M3 11h18a9 9 0 0 1-18 0Z"/>
+            <path d="M8 7.5c0-1.4 1-1.9 1-3M12 7.5c0-1.4 1-1.9 1-3M16 7.5c0-1.4 1-1.9 1-3"/>
+          </svg>
+        </span>
+        Food<span>Picker</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="#home" class="active">หน้าแรก</a></li>
+        <li><a href="#menu">สุ่มเมนู</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main class="main">
+    <section class="hero" id="home">
+      <p class="hero-subtitle">ไม่รู้จะกินอะไรดี?</p>
+      <h1>ให้เราสุ่ม<em>เมนูอร่อย</em>ให้คุณ</h1>
+      <p class="hero-desc">กดปุ่มด้านล่าง แล้วปล่อยให้ความหิวเป็นตัวนำทาง</p>
+    </section>
+
+    <section class="food-card" id="menu" aria-live="polite">
+      <div class="card-image-wrap">
+        <img
+          id="foodImage"
+          class="card-image"
+          src="https://images.unsplash.com/photo-1559314809-0d155014e29e?auto=format&fit=crop&w=900&q=80"
+          alt="ผัดไทยกุ้งสด">
+        <span class="card-badge" id="foodBadge">อาหารไทย</span>
+      </div>
+
+      <div class="card-body">
+        <div class="card-content" id="cardContent">
+          <div class="card-heading">
+            <h2 class="food-name" id="foodName">ผัดไทยกุ้งสด</h2>
+            <p class="food-price" id="foodPrice">฿79</p>
+          </div>
+          <p class="food-desc" id="foodDesc">
+            เส้นจันท์ผัดซอสมะขามเข้มข้น หอมกลิ่นกระเทียมเจียว เสิร์ฟพร้อมกุ้งสดตัวโต ถั่วลิสงบด และมะนาวสด
+          </p>
+        </div>
+
+        <button type="button" class="random-btn" id="randomBtn">
+          <svg class="dice" viewBox="0 0 24 24" aria-hidden="true">
+            <rect x="3" y="3" width="18" height="18" rx="4"/>
+            <circle cx="8.5" cy="8.5" r="1.2"></circle>
+            <circle cx="15.5" cy="15.5" r="1.2"></circle>
+            <circle cx="12" cy="12" r="1.2"></circle>
+          </svg>
+          สุ่มเมนู
+        </button>
+
+        <p class="food-note">มีทั้งหมด <span id="foodTotal">6</span> เมนู · กดสุ่มได้ไม่จำกัด</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>Food Picker — สุ่มให้ทุกมื้อไม่ซ้ำจำเจ</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
